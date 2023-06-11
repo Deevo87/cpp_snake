@@ -1,0 +1,10 @@
+# ninja log v5
+0	193	1686517084991975934	CMakeFiles/cpp_project_snake.dir/main.cpp.o	c559cb83ba60f76c
+1	197	1686517084995975890	CMakeFiles/cpp_project_snake.dir/Food.cpp.o	5d6ca2e8d3130888
+197	254	1686517085051975273	cpp_project_snake	5878c37af5aae28c
+0	210	1686518263928036141	CMakeFiles/cpp_project_snake.dir/Food.cpp.o	5d6ca2e8d3130888
+0	330	1686518264048035240	CMakeFiles/cpp_project_snake.dir/Snake.cpp.o	a1f1e14007e47c0f
+0	366	1686518264080035000	CMakeFiles/cpp_project_snake.dir/main.cpp.o	c559cb83ba60f76c
+366	429	1686518264144034518	cpp_project_snake	c334573c46cbbd4c
+1	216	1686518313075662298	CMakeFiles/cpp_project_snake.dir/Snake.cpp.o	a1f1e14007e47c0f
+216	271	1686518313127661897	cpp_project_snake	c334573c46cbbd4c

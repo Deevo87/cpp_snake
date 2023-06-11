@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/rlaskowski/Pulpit/cpp_project_snake/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -fdiagnostics-color=always -o CMakeFiles/cpp_project_snake.dir/main.cpp.o -c /home/rlaskowski/Pulpit/cpp_project_snake/main.cpp",
+  "file": "/home/rlaskowski/Pulpit/cpp_project_snake/main.cpp"
+},
+{
+  "directory": "/home/rlaskowski/Pulpit/cpp_project_snake/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -fdiagnostics-color=always -o CMakeFiles/cpp_project_snake.dir/Food.cpp.o -c /home/rlaskowski/Pulpit/cpp_project_snake/Food.cpp",
+  "file": "/home/rlaskowski/Pulpit/cpp_project_snake/Food.cpp"
+},
+{
+  "directory": "/home/rlaskowski/Pulpit/cpp_project_snake/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -fdiagnostics-color=always -o CMakeFiles/cpp_project_snake.dir/Snake.cpp.o -c /home/rlaskowski/Pulpit/cpp_project_snake/Snake.cpp",
+  "file": "/home/rlaskowski/Pulpit/cpp_project_snake/Snake.cpp"
+}
+]
