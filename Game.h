@@ -22,7 +22,7 @@ public:
 
     void eatFood();
 
-    bool elementInBody(Vector2 element);
+    bool elementInBody(Vector2 element) const;
 };
 
 

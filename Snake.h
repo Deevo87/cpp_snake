@@ -18,6 +18,7 @@ private:
     std::deque<Vector2> body = {Vector2{6, 9}, Vector2{5, 9}, Vector2{4, 9}};
     Color darkGreen = {43, 51, 24, 255};
     Vector2 direction = {1, 0};
+    bool addSegment = false;
     double lastUpdateTime = 0;
     static std::map<Moves, std::function<void(Snake&)>> actions;
     void moveUp();
@@ -36,6 +37,10 @@ public:
     bool eventTriggered(double interval);
 
     [[nodiscard]] std::deque<Vector2> getSnakeBody() const;
+
+    [[nodiscard]] bool ifAddSegment() const;
+
+    void setAddSegment(bool ifSegment);
 };
 
 

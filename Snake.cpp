@@ -15,8 +15,12 @@ void Snake::Draw(int cellSize) {
 }
 
 void Snake::Update() {
-    body.pop_back();
     body.push_front(Vector2Add(body[0], this->direction));
+    if (this->addSegment) {
+        this->addSegment = false;
+    } else {
+        body.pop_back();
+    }
 }
 
 void Snake::parse(Moves move) {
@@ -71,4 +75,12 @@ bool Snake::eventTriggered(double interval) {
 
 std::deque<Vector2> Snake::getSnakeBody() const {
     return this->body;
+}
+
+bool Snake::ifAddSegment() const {
+    return this->addSegment;
+}
+
+void Snake::setAddSegment(bool ifSegment) {
+    this->addSegment = ifSegment;
 }

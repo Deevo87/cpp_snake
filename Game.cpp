@@ -20,12 +20,12 @@ void Game::eatFood() {
         while (elementInBody(randomPos)) {
             randomPos = Food::generateRandomPos(cellCount);
         }
-        std::cout << "eating food at position: " << food.getPosition().x << food.getPosition().y << std::endl;
+        this->snake.setAddSegment(true);
         food.setPosition(randomPos);
     }
 }
 
-bool Game::elementInBody(Vector2 element) {
+bool Game::elementInBody(Vector2 element) const {
     std::deque<Vector2> body = this->snake.getSnakeBody();
     for (auto i : body) {
         if (Vector2Equals(i, element)) {
