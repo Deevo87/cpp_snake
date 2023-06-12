@@ -2,6 +2,7 @@
 #include <raylib.h>
 #include "Food.h"
 #include "Snake.h"
+#include "Game.h"
 
 using namespace std;
 
@@ -10,6 +11,21 @@ Color green = {173, 204, 96, 255};
 int cellSize = 30;
 int cellCount = 25;
 
+class Gamee {
+public:
+    Snake snake = Snake();
+    Food food = Food(cellCount);
+
+    void Draw() {
+        food.Draw(cellSize);
+        snake.Draw(cellSize);
+    }
+
+    void Update() {
+        snake.Update();
+    }
+};
+
 
 int main() {
 
@@ -17,22 +33,20 @@ int main() {
     InitWindow(cellSize * cellCount, cellSize * cellCount, "Snake");
     SetTargetFPS(60);
 
-    Food food = Food(cellCount);
-    Snake snake = Snake();
+    Game game = Game();
 
     while (!WindowShouldClose()) {
         BeginDrawing();
 
         //Updating snake position
-        if (snake.eventTriggered(0.2)) {
-            snake.Update();
+        if (game.snake.eventTriggered(0.2)) {
+            game.Update();
         }
-        snake.move();
+        game.snake.move();
 
         //Drawing
         ClearBackground(green);
-        food.Draw(cellSize);
-        snake.Draw(cellSize);
+        game.Draw();
 
         EndDrawing();
     }

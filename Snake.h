@@ -29,11 +29,13 @@ public:
 
     void Update();
 
-    bool eventTriggered(double interval);
-
     void parse(Moves move);
 
     void move();
+
+    bool eventTriggered(double interval);
+
+    [[nodiscard]] std::deque<Vector2> getSnakeBody() const;
 };
 
 

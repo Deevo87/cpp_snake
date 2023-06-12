@@ -19,15 +19,6 @@ void Snake::Update() {
     body.push_front(Vector2Add(body[0], this->direction));
 }
 
-bool Snake::eventTriggered(double interval) {
-    double currentTime = GetTime();
-    if (currentTime - lastUpdateTime >= interval) {
-        lastUpdateTime = currentTime;
-        return true;
-    }
-    return false;
-}
-
 void Snake::parse(Moves move) {
     if (actions.find(move) != actions.end()) {
         actions.at(move)(*this);
@@ -67,4 +58,17 @@ void Snake::move() {
     } else if (IsKeyPressed(KEY_RIGHT) && this->direction.x != -1) {
         parse(RIGHT);
     }
+}
+
+bool Snake::eventTriggered(double interval) {
+    double currentTime = GetTime();
+    if (currentTime - lastUpdateTime >= interval) {
+        lastUpdateTime = currentTime;
+        return true;
+    }
+    return false;
+}
+
+std::deque<Vector2> Snake::getSnakeBody() const {
+    return this->body;
 }

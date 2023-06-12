@@ -11,8 +11,8 @@
 
 class Food {
 private:
-    Vector2 position;
-    Texture2D texture;
+    Vector2 position{};
+    Texture2D texture{};
 public:
     explicit Food(int cellCount);
 
@@ -24,7 +24,7 @@ public:
 
     void Draw(int cellSize);
 
-    Vector2 generateRandomPos(int cellCount);
+    static Vector2 generateRandomPos(int cellCount);
 };
 
 
