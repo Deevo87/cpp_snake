@@ -6,11 +6,12 @@ It's a small project for c++ course I was taking at AGH.
 
 - I recommend using tutorials from official raylib github repository:
 
-  > for **linux** https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux
+  > [Working on GNU/Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)
 
-  > for **windows** https://github.com/raysan5/raylib/wiki/Working-on-Windows
+  > [Working on Windows](https://github.com/raysan5/raylib/wiki/Working-on-Windows)
 
-  > for **macOS** https://github.com/raysan5/raylib/wiki/Working-on-macOS
+  > [Working on macOS](https://github.com/raysan5/raylib/wiki/Working-on-macOS)
+
 2. Git clone or download the repository build the project and enjoy the game!
 - The file that contains the game "engine" is the <stronger>main.cpp</stronger>.
   
