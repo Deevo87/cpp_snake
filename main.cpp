@@ -23,6 +23,12 @@ int main() {
     while (!WindowShouldClose()) {
         BeginDrawing();
 
+        //Updating snake position
+        if (snake.eventTriggered(0.2)) {
+            snake.Update();
+        }
+        snake.move();
+
         //Drawing
         ClearBackground(green);
         food.Draw(cellSize);

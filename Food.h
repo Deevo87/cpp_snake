@@ -14,11 +14,16 @@ private:
     Vector2 position;
     Texture2D texture;
 public:
-    Food(int cellCount);
+    explicit Food(int cellCount);
+
     ~Food();
+
     [[nodiscard]] Vector2 getPosition() const;
+
     void setPosition(Vector2 newPosition);
+
     void Draw(int cellSize);
+
     Vector2 generateRandomPos(int cellCount);
 };
 
