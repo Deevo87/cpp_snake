@@ -1,5 +1,5 @@
 
-It's a small project for c++ course I was taking on AGH.
+It's a small project for c++ course I was taking at AGH.
 
   <h2>To play the game you have to:</h2>
 1. Install and setup <strong>raylib</strong> library on your computer.
