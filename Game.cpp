@@ -4,6 +4,10 @@
 
 #include "Game.h"
 
+Game::Game(int cellSize, int cellCount) : cellSize(cellSize), cellCount(cellCount) {
+
+}
+
 void Game::Draw() {
     if (running) {
         food.Draw(cellSize);
@@ -11,7 +15,7 @@ void Game::Draw() {
     } else {
         food.Draw(cellSize);
         snake.Draw(cellSize);
-        const char* message = "GAME OVER";
+        const char *message = "GAME OVER";
         int fontSize = 60;
         int padding = 10;
         int textWidth = MeasureText(message, fontSize);
@@ -45,8 +49,8 @@ void Game::eatFood() {
     }
 }
 
-bool Game::elementInBody(Vector2 element, const std::deque<Vector2>& body) const {
-    for (auto i : body) {
+bool Game::elementInBody(Vector2 element, const std::deque<Vector2> &body) const {
+    for (auto i: body) {
         if (Vector2Equals(i, element)) {
             return true;
         }

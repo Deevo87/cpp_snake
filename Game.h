@@ -11,10 +11,12 @@
 
 class Game {
 private:
-    int cellSize = 30;
-    int cellCount = 25;
+    int cellSize;
+    int cellCount;
     bool running = true;
 public:
+    Game(int cellSize, int cellCount);
+
     Snake snake = Snake();
     Food food = Food(cellCount);
 

@@ -16,7 +16,7 @@ int main() {
     InitWindow(cellSize * cellCount, cellSize * cellCount, "Snake");
     SetTargetFPS(60);
 
-    Game game = Game();
+    Game game = Game(cellSize, cellCount);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
