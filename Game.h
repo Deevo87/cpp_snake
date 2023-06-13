@@ -1,7 +1,3 @@
-//
-// Created by rlaskowski on 12.06.23.
-//
-
 #ifndef CPP_PROJECT_SNAKE_GAME_H
 #define CPP_PROJECT_SNAKE_GAME_H
 

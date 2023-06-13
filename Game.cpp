@@ -1,7 +1,3 @@
-//
-// Created by rlaskowski on 12.06.23.
-//
-
 #include "Game.h"
 
 Game::Game(int cellSize, int cellCount, int offset) : cellSize(cellSize), cellCount(cellCount), offset(offset) {

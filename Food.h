@@ -1,7 +1,3 @@
-//
-// Created by rlaskowski on 11.06.23.
-//
-
 #ifndef CPP_PROJECT_SNAKE_FOOD_H
 #define CPP_PROJECT_SNAKE_FOOD_H
 

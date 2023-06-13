@@ -1,7 +1,3 @@
-//
-// Created by rlaskowski on 11.06.23.
-//
-
 #include "Food.h"
 
 

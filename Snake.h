@@ -1,7 +1,3 @@
-//
-// Created by rlaskowski on 11.06.23.
-//
-
 #ifndef CPP_PROJECT_SNAKE_SNAKE_H
 #define CPP_PROJECT_SNAKE_SNAKE_H
 
