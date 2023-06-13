@@ -1,7 +1,7 @@
 
 It's a small project for c++ course I was taking at AGH.
 
-  <h2>To play the game you have to:</h2>
+  <h2>To launch the game you have to:</h2>
 1. Install and setup <strong>raylib</strong> library on your computer.
 
 - I recommend using tutorials from official raylib github repository:
@@ -15,3 +15,8 @@ It's a small project for c++ course I was taking at AGH.
 2. Git clone or download the repository, build the project and enjoy the game!
 - The file that contains the game "engine" is the <strong>main.cpp</strong>.
   
+  <h2>How to play the game?</h2>
+
+- you controll the snake using arrows
+- if you hit the wall or your body the game is over and you start again
+- the score is at the top of the screen
