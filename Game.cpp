@@ -4,23 +4,25 @@
 
 #include "Game.h"
 
-Game::Game(int cellSize, int cellCount) : cellSize(cellSize), cellCount(cellCount) {
+Game::Game(int cellSize, int cellCount, int offset) : cellSize(cellSize), cellCount(cellCount), offset(offset) {
 
 }
 
 void Game::Draw() {
     if (running) {
-        food.Draw(cellSize);
-        snake.Draw(cellSize);
+        food.Draw(cellSize, offset);
+        snake.Draw(cellSize, offset);
     } else {
-        food.Draw(cellSize);
-        snake.Draw(cellSize);
+        food.Draw(cellSize, offset);
+        snake.Draw(cellSize, offset);
+
+        //Drawing game over message
         const char *message = "GAME OVER";
         int fontSize = 60;
         int padding = 10;
         int textWidth = MeasureText(message, fontSize);
-        int reactX = (cellCount * cellSize - textWidth) / 2 - padding;
-        int reactY = (cellCount * cellSize - fontSize) / 2 - padding;
+        int reactX = (cellCount * cellSize - textWidth) / 2 - padding + offset;
+        int reactY = (cellCount * cellSize - fontSize) / 2 - padding + offset;
         int reactWidth = textWidth + padding * 2;
         int reactHeight = fontSize + padding * 2;
 
@@ -46,6 +48,7 @@ void Game::eatFood() {
         }
         this->snake.setAddSegment(true);
         food.setPosition(randomPos);
+        this->score++;
     }
 }
 
@@ -76,8 +79,8 @@ void Game::checkCollisionsWithBody() {
 void Game::gameOver() {
     this->snake.reset();
     this->food.setPosition(Food::generateRandomPos(cellCount));
-
     this->running = false;
+    this->score = 0;
 }
 
 bool Game::ifRunning() const {
@@ -86,4 +89,12 @@ bool Game::ifRunning() const {
 
 void Game::setRunning(bool isRunning) {
     this->running = isRunning;
+}
+
+int Game::getScore() const {
+    return this->score;
+}
+
+void Game::setScore(int newScore) {
+    this->score = newScore;
 }

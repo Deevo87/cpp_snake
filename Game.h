@@ -13,9 +13,11 @@ class Game {
 private:
     int cellSize;
     int cellCount;
+    int offset;
     bool running = true;
+    int score = 0;
 public:
-    Game(int cellSize, int cellCount);
+    Game(int cellSize, int cellCount, int offset);
 
     Snake snake = Snake();
     Food food = Food(cellCount);
@@ -38,6 +40,9 @@ public:
 
     void setRunning(bool isRunning);
 
+    void setScore(int newScore);
+
+    [[nodiscard]] int getScore() const;
 };
 
 

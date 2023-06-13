@@ -4,19 +4,20 @@
 
 using namespace std;
 
-Color green = {173, 204, 96, 255};
+Color green = {128, 215, 100, 255};
+Color darkGreen = {43, 51, 24, 255};
 
 int cellSize = 30;
 int cellCount = 25;
-
+int offset = 70;
 
 int main() {
 
     cout << "Starting the game..." << endl;
-    InitWindow(cellSize * cellCount, cellSize * cellCount, "Snake");
+    InitWindow(cellSize * cellCount + 2 * offset, cellSize * cellCount + 2 * offset, "Snake");
     SetTargetFPS(60);
 
-    Game game = Game(cellSize, cellCount);
+    Game game = Game(cellSize, cellCount, offset);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
@@ -30,6 +31,10 @@ int main() {
 
         //Drawing
         ClearBackground(green);
+        DrawRectangleLinesEx(
+                Rectangle{(float) offset - 5, (float) offset - 5, (float) cellSize * (float) cellCount + 10,
+                          (float) cellSize * (float) cellCount + 10}, 5, darkGreen);
+        DrawText(TextFormat("%i", game.getScore()), (cellSize * cellCount) / 2 + offset, cellCount / 2 + 5, 40, BLACK);
         game.Draw();
 
         EndDrawing();

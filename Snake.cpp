@@ -5,11 +5,11 @@
 #include "Snake.h"
 
 
-void Snake::Draw(int cellSize) {
+void Snake::Draw(int cellSize, int offset) {
     for (unsigned int i = 0; i < this->body.size(); i++) {
         float x = body[i].x;
         float y = body[i].y;
-        Rectangle segment = Rectangle{x * (float) cellSize, y * (float) cellSize, float(cellSize), float(cellSize)};
+        Rectangle segment = Rectangle{x * (float) cellSize + (float)offset, y * (float) cellSize + (float)offset, float(cellSize), float(cellSize)};
         DrawRectangleRounded(segment, 0.5, 6, this->darkGreen);
     }
 }

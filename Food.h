@@ -22,7 +22,7 @@ public:
 
     void setPosition(Vector2 newPosition);
 
-    void Draw(int cellSize);
+    void Draw(int cellSize, int offset);
 
     static Vector2 generateRandomPos(int cellCount);
 };

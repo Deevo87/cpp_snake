@@ -26,7 +26,7 @@ private:
     void moveLeft();
     void moveRight();
 public:
-    void Draw(int cellSize);
+    void Draw(int cellSize, int offset);
 
     void Update();
 
