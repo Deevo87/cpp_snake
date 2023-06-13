@@ -20,3 +20,9 @@ It's a small project for c++ course I was taking at AGH.
 - you controll the snake using arrows
 - if you hit the wall or your body the game is over and you start again
 - the score is at the top of the screen
+
+![gameplay png](resources/snakethegame.png)
+
+![gameover png](resources/gameover.png)
+
+![gameplay gif](resources/gameplay.gif)
