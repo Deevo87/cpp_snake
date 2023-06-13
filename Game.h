@@ -7,11 +7,13 @@
 
 #include "Snake.h"
 #include "Food.h"
+#include <raylib.h>
 
 class Game {
 private:
     int cellSize = 30;
     int cellCount = 25;
+    bool running = true;
 public:
     Snake snake = Snake();
     Food food = Food(cellCount);
@@ -22,7 +24,18 @@ public:
 
     void eatFood();
 
-    bool elementInBody(Vector2 element) const;
+    [[nodiscard]] bool elementInBody(Vector2 element, const std::deque<Vector2>& body) const;
+
+    void checkCollisionsWithBorders();
+
+    void checkCollisionsWithBody();
+
+    void gameOver();
+
+    [[nodiscard]] bool ifRunning() const;
+
+    void setRunning(bool isRunning);
+
 };
 
 

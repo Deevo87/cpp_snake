@@ -32,7 +32,7 @@ public:
 
     void parse(Moves move);
 
-    void move();
+    bool move();
 
     bool eventTriggered(double interval);
 
@@ -41,6 +41,8 @@ public:
     [[nodiscard]] bool ifAddSegment() const;
 
     void setAddSegment(bool ifSegment);
+
+    void reset();
 };
 
 

@@ -52,7 +52,7 @@ void Snake::moveRight() {
     this->direction = {1, 0};
 }
 
-void Snake::move() {
+bool Snake::move() {
     if (IsKeyPressed(KEY_UP) && this->direction.y != 1) {
         parse(UP);
     } else if (IsKeyPressed(KEY_DOWN) && this->direction.y != -1) {
@@ -61,7 +61,10 @@ void Snake::move() {
         parse(LEFT);
     } else if (IsKeyPressed(KEY_RIGHT) && this->direction.x != -1) {
         parse(RIGHT);
+    } else {
+        return false;
     }
+    return true;
 }
 
 bool Snake::eventTriggered(double interval) {
@@ -83,4 +86,9 @@ bool Snake::ifAddSegment() const {
 
 void Snake::setAddSegment(bool ifSegment) {
     this->addSegment = ifSegment;
+}
+
+void Snake::reset() {
+    this->body = {Vector2{6, 9}, Vector2{5, 9}, Vector2{4, 9}};
+    this->direction = {1, 0};
 }
